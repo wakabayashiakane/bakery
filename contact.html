@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+</html>
+
+<body class="contact-page">
+    <header>
+        <div class="header-left">
+            <h1 class="header-logo">
+                <a href="index.html"><img src="img/logo1.png" alt=""></a>
+            </h1>
+        </div>
+        <div class="header-right">
+            <nav>
+                <ul>
+                    <li><a href="menu.html">Bakery Shopのぱん</a></li>
+                    <li><a href="news.html">おしらせ</a></li>
+                    <li><a href="shop.html">お店の場所</a></li>
+                    <li><a href="online.html">オンラインショップ</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+                <div class="top-btn">
+                    <a href="index.html">
+                        <img src="img/icons8-ベーカリー-48.png" alt="">トップページへ戻る</a>
+                </div>
+                <div class="close-btn">
+                    <a href="#">
+                        <img src="img/icons8-バツ-50.png" alt="">とじる</a>
+                </div>
+            </nav>
+            <div class="toggle-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="mask"></div>
+        </div>
+    </header>
+    <main>
+        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="index.html">
+                    <span itemprop="name"><i class="fa fa-home fa-fw" aria-hidden="true"></i>ホーム</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
+
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="contact.html">
+                    <span itemprop="name">CONTACT</span>
+                </a>
+                <meta itemprop="position" content="2" />
+            </li>
+        </ol>
+        <section class="contact wrapper">
+            <h2 class="section-title">
+                <span class="en">CONTACT</span>
+                <span class="ja">お問い合わせフォーム</span>
+            </h2>
+
+            <form>
+                <p>ご意見・ご要望、お問い合わせは、お気軽に下記のフォーム へどうぞ。<br>
+                    また「こんなパンを食べてみたい！」 という皆様のご意見も募集しております。</p>
+                <dl>
+                    <dt><label for="name">Name:</label></dt>
+                    <dd><input type="text" id="name" name="your-name"></dd>
+                    <dt><label for="email">Mail:</label></dt>
+                    <dd><input type="email" id="email" name="your-email"></dd>
+                    <dt><label for="message">Message:</label></dt>
+                    <dd><textarea id="message" name="your-message"></textarea></dd>
+                </dl>
+                <div class="form btn"><input type="submit" value="SEND"></div>
+            </form>
+        </section>
+        <p id="page-top"><a href="index.html">Page Top</a></p>
+    </main>
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="img/logo1.png" alt="">
+            </div>
+            <div class="footer-nav">
+                <ul class="sns">
+                    <li><a href="https://www.facebook.com/"><img src="img/facebookアイコン.png" alt=""></a></li>
+                    <li><a href="https://www.instagram.com"><img src="img/instagramアイコン-50.png" alt=""></a></li>
+                    <li><a href="https://twitter.com/"><img src="img/twitterアイコン.png" alt=""></a></li>
+                </ul>
+                <p>
+                <p>© 2024 Bakery Shop</p>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="js/main.js"></script>
+</body>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+
+</head>
+
+</html>
+
+<body class="menu-page">
+    <header>
+        <div class="header-left">
+            <h1 class="header-logo">
+                <a href="index.html"><img src="img/logo1.png" alt=""></a>
+            </h1>
+        </div>
+        <div class="header-right">
+            <nav>
+                <ul>
+                    <li><a href="menu.html">Bakery Shopのぱん</a></li>
+                    <li><a href="news.html">おしらせ</a></li>
+                    <li><a href="shop.html">お店の場所</a></li>
+                    <li><a href="online.html">オンラインショップ</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+                <div class="top-btn">
+                    <a href="index.html">
+                        <img src="img/icons8-ベーカリー-48.png" alt="">トップページへ戻る</a>
+                </div>
+                <div class="close-btn">
+                    <a href="#">
+                        <img src="img/icons8-バツ-50.png" alt="">とじる</a>
+                </div>
+            </nav>
+            <div class="toggle-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="mask"></div>
+        </div>
+    </header>
+    <main>
+        <div class="mainvisual">
+            <div class="title">
+                <span>MENU</span>
+            </div>
+        </div>
+
+        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="index.html">
+                    <span itemprop="name"><i class="fa fa-home fa-fw" aria-hidden="true"></i>ホーム</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
+
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="menu.html">
+                    <span itemprop="name">MENU</span>
+                </a>
+                <meta itemprop="position" content="2" />
+            </li>
+        </ol>
+        <section class="menu wrapper">
+            <h2 class="section-title">BREAD</h2>
+            <ul class="menu-list">
+                <li class="fadein item">
+                    <span>おすすめ</span>
+                    <img src="img/ハードパン１.jpg" alt="">
+                    <p>【product-name】</p><br>
+                    <!--リンク元のHTMLリンク先は表示させたいエリアのid名を指定します。-->
+                    <!-- クリックしたらモーダルを表示するボタン -->
+                    <a href="#" class="modal-toggle btnshine btnshine" data-modal="modalOne">Click</a>
+                </li>
+                <!-- オーバーレイ -->
+                <div class="overlay"></div>
+
+                <!-- モーダルウィンドウ -->
+                <div id="modalOne" class="modal">
+                    <div class="modal-close">×</div>
+                    <div class="modal-inner">
+                        <div class="image">
+                            <img src="img/ハードパン１.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <p>【product-name】</p><br>
+                            <p>￥999</p><br>
+                            <p>ここに商品の説明が入ります。</p>
+                        </div>
+                    </div>
+                </div>
+                <li class="fadein item">
+                    <span>ロングセラー</span>
+                    <img src="img/ハードパン２.jpg" alt="">
+                    <p>【product-name】</p><br>
+                    <!--リンク元のHTMLリンク先は表示させたいエリアのid名を指定します。-->
+                    <!-- クリックしたらモーダルを表示するボタン -->
+                    <a href="#" class="modal-toggle btnshine" data-modal="modalTwo">Click</a>
+                </li>
+                <!-- オーバーレイ -->
+                <div class="overlay"></div>
+
+                <!-- モーダルウィンドウ -->
+                <div id="modalTwo" class="modal">
+                    <div class="modal-close">×</div>
+                    <div class="modal-inner">
+                        <div class="image">
+                            <img src="img/ハードパン２.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <p>【product-name】</p><br>
+                            <p>￥999</p><br>
+                            <p>ここに商品の説明が入ります。</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <li class="fadein item">
+                    <img src="img/ハードパン３.jpg" alt="">
+                    <p>【product-name】</p><br>
+                    <!--リンク元のHTMLリンク先は表示させたいエリアのid名を指定します。-->
+                    <!-- クリックしたらモーダルを表示するボタン -->
+                    <a href="#" class="modal-toggle btnshine" data-modal="modalThree">Click</a>
+                </li>
+                <!-- オーバーレイ -->
+                <div class="overlay"></div>
+
+                <!-- モーダルウィンドウ -->
+                <div id="modalThree" class="modal">
+                    <div class="modal-close">×</div>
+                    <div class="modal-inner">
+                        <div class="image">
+                            <img src="img/ハードパン３.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <p>【product-name】</p><br>
+                            <p>￥999</p><br>
+                            <p>ここに商品の説明が入ります。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <li class="fadein item">
+                    <img src="img/ハードパン４.jpg" alt="">
+                    <p>【product-name】</p><br>
+                    <!--リンク元のHTMLリンク先は表示させたいエリアのid名を指定します。-->
+                    <!-- クリックしたらモーダルを表示するボタン -->
+                    <a href="#" class="modal-toggle btnshine" data-modal="modalFour">Click</a>
+                </li>
+                <!-- オーバーレイ -->
+                <div class="overlay"></div>
+
+                <!-- モーダルウィンドウ -->
+                <div id="modalFour" class="modal">
+                    <div class="modal-close">×</div>
+                    <div class="modal-inner">
+                        <div class="image">
+                            <img src="img/ハードパン４.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <p>【product-name】</p><br>
+                            <p>￥999</p><br>
+                            <p>ここに商品の説明が入ります。</p>
+                        </div>
+                    </div>
+                </div>
+
+            </ul>
+            <h2 class="section-title">SWEET BREAD</h2>
+            <ul class="menu-list">
+                <li class="fadein item">
+                    <span>人気NO.1</span>
+                    <img src="img/甘いパン１.jpg" alt="">
+                    <p>【product-name】</p><br>
+                    <!--リンク元のHTMLリンク先は表示させたいエリアのid名を指定します。-->
+                    <!-- クリックしたらモーダルを表示するボタン -->
+                    <a href="#" class="modal-toggle btnshine" data-modal="modalSweet1">Click</a>
+                </li>
+                <!-- オーバーレイ -->
+                <div class="overlay"></div>
+
+                <!-- モーダルウィンドウ -->
+                <div id="modalSweet1" class="modal">
+                    <div class="modal-close">×</div>
+                    <div class="modal-inner">
+                        <div class="image">
+                            <img src="img/甘いパン１.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <p>【product-name】</p><br>
+                            <p>￥999</p><br>
+                            <p>ここに商品の説明が入ります。</p>
+                        </div>
+                    </div>
+                </div>
+                <li class="fadein item">
+                    <img src="img/甘いパン２.jpg" alt="">
+                    <p>【product-name】</p><br>
+                    <!--リンク元のHTMLリンク先は表示させたいエリアのid名を指定します。-->
+                    <!-- クリックしたらモーダルを表示するボタン -->
+                    <a href="#" class="modal-toggle btnshine" data-modal="modalSweet2">Click</a>
+                </li>
+                <!-- オーバーレイ -->
+                <div class="overlay"></div>
+
+                <!-- モーダルウィンドウ -->
+                <div id="modalSweet2" class="modal">
+                    <div class="modal-close">×</div>
+                    <div class="modal-inner">
+                        <div class="image">
+                            <img src="img/甘いパン２.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <p>【product-name】</p><br>
+                            <p>￥999</p><br>
+                            <p>ここに商品の説明が入ります。</p>
+                        </div>
+                    </div>
+                </div>
+                <li class="fadein item">
+                    <img src="img/甘いパン３.jpg" alt="">
+                    <p>【product-name】</p><br>
+                    <!--リンク元のHTMLリンク先は表示させたいエリアのid名を指定します。-->
+                    <!-- クリックしたらモーダルを表示するボタン -->
+                    <a href="#" class="modal-toggle btnshine" data-modal="modalSweet3">Click</a>
+                </li>
+                <!-- オーバーレイ -->
+                <div class="overlay"></div>
+
+                <!-- モーダルウィンドウ -->
+                <div id="modalSweet3" class="modal">
+                    <div class="modal-close">×</div>
+                    <div class="modal-inner">
+                        <div class="image">
+                            <img src="img/甘いパン３.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <p>【product-name】</p><br>
+                            <p>￥999</p><br>
+                            <p>ここに商品の説明が入ります。</p>
+                        </div>
+                    </div>
+                </div>
+                <li class="fadein item">
+                    <img src="img/甘いパン４.jpg" alt="">
+                    <p>【product-name】</p><br>
+                    <!--リンク元のHTMLリンク先は表示させたいエリアのid名を指定します。-->
+                    <!-- クリックしたらモーダルを表示するボタン -->
+                    <a href="#" class="modal-toggle btnshine" data-modal="modalSweet4">Click</a>
+                </li>
+                <!-- オーバーレイ -->
+                <div class="overlay"></div>
+
+                <!-- モーダルウィンドウ -->
+                <div id="modalSweet4" class="modal">
+                    <div class="modal-close">×</div>
+                    <div class="modal-inner">
+                        <div class="image">
+                            <img src="img/甘いパン４.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <p>【product-name】</p><br>
+                            <p>￥999</p><br>
+                            <p>ここに商品の説明が入ります。</p>
+                        </div>
+                    </div>
+                </div>
+                <li class="fadein item">
+                    <img src="img/甘いパン５.jpg" alt="">
+                    <p>【product-name】</p><br>
+                    <!--リンク元のHTMLリンク先は表示させたいエリアのid名を指定します。-->
+                    <!-- クリックしたらモーダルを表示するボタン -->
+                    <a href="#" class="modal-toggle btnshine" data-modal="modalSweet5">Click</a>
+                </li>
+                <!-- オーバーレイ -->
+                <div class="overlay"></div>
+
+                <!-- モーダルウィンドウ -->
+                <div id="modalSweet5" class="modal">
+                    <div class="modal-close">×</div>
+                    <div class="modal-inner">
+                        <div class="image">
+                            <img src="img/甘いパン５.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <p>【product-name】</p><br>
+                            <p>￥999</p><br>
+                            <p>ここに商品の説明が入ります。</p>
+                        </div>
+                    </div>
+                </div>
+                <li class="fadein item">
+                    <img src="img/甘いパン６.jpg" alt="">
+                    <p>【product-name】</p><br>
+                    <!--リンク元のHTMLリンク先は表示させたいエリアのid名を指定します。-->
+                    <!-- クリックしたらモーダルを表示するボタン -->
+                    <a href="#" class="modal-toggle btnshine" data-modal="modalSweet6">Click</a>
+                </li>
+                <!-- オーバーレイ -->
+                <div class="overlay"></div>
+
+                <!-- モーダルウィンドウ -->
+                <div id="modalSweet6" class="modal">
+                    <div class="modal-close">×</div>
+                    <div class="modal-inner">
+                        <div class="image">
+                            <img src="img/甘いパン６.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <p>【product-name】</p><br>
+                            <p>￥999</p><br>
+                            <p>ここに商品の説明が入ります。</p>
+                        </div>
+                    </div>
+                </div>
+                <li class="fadein item">
+                    <img src="img/甘いパン７.jpg" alt="">
+                    <p>【product-name】</p><br>
+                    <!--リンク元のHTMLリンク先は表示させたいエリアのid名を指定します。-->
+                    <!-- クリックしたらモーダルを表示するボタン -->
+                    <a href="#" class="modal-toggle btnshine" data-modal="modalSweet7">Click</a>
+                </li>
+                <!-- オーバーレイ -->
+                <div class="overlay"></div>
+
+                <!-- モーダルウィンドウ -->
+                <div id="modalSweet7" class="modal">
+                    <div class="modal-close">×</div>
+                    <div class="modal-inner">
+                        <div class="image">
+                            <img src="img/甘いパン７.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <p>【product-name】</p><br>
+                            <p>￥999</p><br>
+                            <p>ここに商品の説明が入ります。</p>
+                        </div>
+                    </div>
+                </div>
+                <li class="fadein item">
+                    <img src="img/甘いパン８.jpg" alt="">
+                    <p>【product-name】</p><br>
+                    <!--リンク元のHTMLリンク先は表示させたいエリアのid名を指定します。-->
+                    <!-- クリックしたらモーダルを表示するボタン -->
+                    <a href="#" class="modal-toggle btnshine" data-modal="modalSweet8">Click</a>
+                </li>
+                <!-- オーバーレイ -->
+                <div class="overlay"></div>
+
+                <!-- モーダルウィンドウ -->
+                <div id="modalSweet8" class="modal">
+                    <div class="modal-close">×</div>
+                    <div class="modal-inner">
+                        <div class="image">
+                            <img src="img/甘いパン８.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <p>【product-name】</p><br>
+                            <p>￥999</p><br>
+                            <p>ここに商品の説明が入ります。</p>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+            <h2 class="section-title">SANDWICH</h2>
+            <ul class="menu-list">
+                <li class="fadein item">
+                    <img src="img/サンドイッチ１.jpg" alt="">
+                    <p>【product-name】</p><br>
+                    <!--リンク元のHTMLリンク先は表示させたいエリアのid名を指定します。-->
+                    <!-- クリックしたらモーダルを表示するボタン -->
+                    <a href="#" class="modal-toggle btnshine" data-modal="modalSand1">Click</a>
+                </li>
+                <!-- オーバーレイ -->
+                <div class="overlay"></div>
+
+                <!-- モーダルウィンドウ -->
+                <div id="modalSand1" class="modal">
+                    <div class="modal-close">×</div>
+                    <div class="modal-inner">
+                        <div class="image">
+                            <img src="img/サンドイッチ１.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <p>【product-name】</p><br>
+                            <p>￥999</p><br>
+                            <p>ここに商品の説明が入ります。</p>
+                        </div>
+                    </div>
+                </div>
+                <li class="fadein item">
+                    <img src="img/サンドイッチ２.jpg" alt="">
+                    <p>【product-name】</p><br>
+                    <!--リンク元のHTMLリンク先は表示させたいエリアのid名を指定します。-->
+                    <!-- クリックしたらモーダルを表示するボタン -->
+                    <a href="#" class="modal-toggle btnshine" data-modal="modalSand2">Click</a>
+                </li>
+                <!-- オーバーレイ -->
+                <div class="overlay"></div>
+
+                <!-- モーダルウィンドウ -->
+                <div id="modalSand2" class="modal">
+                    <div class="modal-close">×</div>
+                    <div class="modal-inner">
+                        <div class="image">
+                            <img src="img/サンドイッチ２.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <p>【product-name】</p><br>
+                            <p>￥999</p><br>
+                            <p>ここに商品の説明が入ります。</p>
+                        </div>
+                    </div>
+                </div>
+                <li class="fadein item">
+                    <img src="img/サンドイッチ３.jpg" alt="">
+                    <p>【product-name】</p><br>
+                    <!--リンク元のHTMLリンク先は表示させたいエリアのid名を指定します。-->
+                    <!-- クリックしたらモーダルを表示するボタン -->
+                    <a href="#" class="modal-toggle btnshine" data-modal="modalSand3">Click</a>
+                </li>
+                <!-- オーバーレイ -->
+                <div class="overlay"></div>
+
+                <!-- モーダルウィンドウ -->
+                <div id="modalSand3" class="modal">
+                    <div class="modal-close">×</div>
+                    <div class="modal-inner">
+                        <div class="image">
+                            <img src="img/サンドイッチ３.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <p>【product-name】</p><br>
+                            <p>￥999</p><br>
+                            <p>ここに商品の説明が入ります。</p>
+                        </div>
+                    </div>
+                </div>
+                <li class="fadein item">
+                    <img src="img/サンドイッチ４.jpg" alt="">
+                    <p>【product-name】</p><br>
+                    <!--リンク元のHTMLリンク先は表示させたいエリアのid名を指定します。-->
+                    <!-- クリックしたらモーダルを表示するボタン -->
+                    <a href="#" class="modal-toggle btnshine" data-modal="modalSand4">Click</a>
+                </li>
+                <!-- オーバーレイ -->
+                <div class="overlay"></div>
+
+                <!-- モーダルウィンドウ -->
+                <div id="modalSand4" class="modal">
+                    <div class="modal-close">×</div>
+                    <div class="modal-inner">
+                        <div class="image">
+                            <img src="img/サンドイッチ４.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <p>【product-name】</p><br>
+                            <p>￥999</p><br>
+                            <p>ここに商品の説明が入ります。</p>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+
+        </section>
+        <p id="page-top"><a href="index.html">Page Top</a></p>
+    </main>
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="img/logo1.png" alt="">
+            </div>
+            <div class="footer-nav">
+                <ul class="sns">
+                    <li><a href="https://www.facebook.com/"><img src="img/facebookアイコン.png" alt=""></a></li>
+                    <li><a href="https://www.instagram.com"><img src="img/instagramアイコン-50.png" alt=""></a></li>
+                    <li><a href="https://twitter.com/"><img src="img/twitterアイコン.png" alt=""></a></li>
+                </ul>
+                <p>
+                <p>© 2024 Bakery Shop</p>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
