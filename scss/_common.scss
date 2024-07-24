@@ -1,0 +1,490 @@
+@use "mixin" as m;
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Zen Maru Gothic", "Yu Gothic", "Rampart One", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", sans-serif;
+    background-color: #FAF8F5;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ----------------
+共通パーツ 
+-------------------*/
+.wrapper {
+    max-width: 1200px;
+    padding: 0 3%;
+    margin: 0 auto;
+}
+
+
+.section-title {
+    text-align: center;
+
+    .en {
+        text-align: center;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin-bottom: 70px; */
+        font-size: 4.8rem;
+        margin-top: 120px;
+        gap: 40px;
+
+        @include m.sp {
+            font-size: 3.0rem;
+        }
+
+        &::after,
+        &::before {
+            content: "";
+            width: 15%;
+            border: 3px solid black;
+        }
+
+    }
+
+    .ja {
+        font-size: 2.4rem;
+        margin-bottom: 70px;
+        display: inline-block;
+        font-weight: normal;
+
+        @include m.sp {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.fadein {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 2s;
+}
+
+
+.btn {
+    text-align: center;
+    background-color: #5D261B;
+    padding: 20px 40px;
+    border-radius: 50px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2.4rem;
+    width: 30vw;
+    transition: all 0.2s ease;
+
+    @include m.sp {
+        width: 80vw;
+    }
+
+    a {
+
+        color: white;
+        text-decoration: none;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+/* ---------------
+ページトップへスクロール 
+--------------------*/
+#page-top a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #777;
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    border-radius: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.0rem;
+    transition: all 0.3s;
+
+    &:hover {
+        background: #777;
+    }
+}
+
+/*リンクを右下に固定*/
+#page-top {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 2;
+    /*はじめは非表示*/
+    opacity: 0;
+    transform: translateY(100px);
+
+    &.UpMove {
+        animation: UpAnime 0.5s forwards;
+    }
+
+    &.DownMove {
+        animation: DownAnime 0.5s forwards;
+    }
+}
+
+/*　上に上がる動き　*/
+@keyframes UpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*　下に下がる動き　*/
+@keyframes DownAnime {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(100px);
+    }
+}
+
+/*-----------------
+ header
+ ------------------ */
+header {
+    height: 140px;
+    text-align: center;
+    background-color: #5D261B;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-left {
+        position: relative;
+        top: 0px;
+        left: 20px;
+    }
+
+    .header-logo img {
+        width: 100px;
+    }
+
+    nav ul {
+        align-items: center;
+    }
+
+    .header-right {
+        align-items: center;
+    }
+}
+
+/* ------------
+nav
+--------------- */
+nav {
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    padding: 60px 25px;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    opacity: 0;
+
+    a {
+        color: white;
+        font-size: 2.4rem;
+
+        &:hover {
+            color: #FBD650;
+        }
+    }
+
+    ul li {
+        margin-top: 30px;
+    }
+}
+
+/* --------------------
+ハンバーガ―メニュー 
+----------------------*/
+.toggle-btn {
+    position: relative;
+    background: #FBD650;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    right: 10px;
+    border-radius: 5px;
+    z-index: 20;
+
+    span {
+        display: inline-block;
+        transition: all .4s;
+        position: absolute;
+        left: 14px;
+        height: 2px;
+        border-radius: 5px;
+        background: #5D261B;
+        width: 45%;
+
+        &:nth-of-type(1) {
+            top: 13px;
+        }
+
+        &:nth-of-type(2) {
+            top: 19px;
+        }
+
+        &:nth-of-type(3) {
+            top: 25px;
+
+            &::after {
+                content: "Menu";
+                position: absolute;
+                top: 5px;
+                left: -2px;
+                color: #5D261B;
+                font-size: 1.0rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.mask {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #5c4a3b;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.open .mask {
+    visibility: visible;
+    transition: all 0.3s;
+    opacity: 0.9;
+}
+
+.top-btn {
+    text-align: center;
+    border: 1px solid #000;
+    background-color: #FAF8F5;
+    border-radius: 50px;
+    padding: 10px 10px;
+    margin-top: 40px;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include m.sp {
+        width: 80%;
+    }
+
+    a {
+        color: #5D261B;
+
+        &:hover {
+            color: #16926b;
+        }
+    }
+
+    img {
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        margin-right: 10px;
+    }
+}
+
+.close-btn {
+    border: 1px solid #FAF8F5;
+    background-color: #5c4a3b;
+    border-radius: 50px;
+    padding: 10px 10px;
+    margin-top: 40px;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include m.sp {
+        width: 80%;
+    }
+
+    a {
+        color: #FAF8F5;
+
+        &a:hover {
+            color: #16926b;
+        }
+    }
+
+    img {
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        margin-right: 10px;
+    }
+}
+
+/* -------------------
+  ハンバーガーメニュー押したとき
+  -------------------------- */
+
+.open nav {
+    visibility: visible;
+    opacity: 1;
+    transition: all 1s;
+
+    ul {
+        flex-direction: column;
+    }
+
+    /*openクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
+
+    .toggle-btn span {
+        &:nth-of-type(1) {
+            top: 14px;
+            left: 18px;
+            transform: translateY(6px) rotate(-45deg);
+            width: 30%;
+        }
+
+        &:nth-of-type(2) {
+            opacity: 0;
+        }
+
+        &:nth-of-type(3) {
+            top: 26px;
+            left: 18px;
+            transform: translateY(-6px) rotate(45deg);
+            width: 30%;
+        }
+
+        &:nth-of-type(3)::after {
+            content: "Close";
+            /*3つ目の要素のafterにClose表示を指定*/
+            transform: translateY(0) rotate(-45deg);
+            top: 5px;
+            left: 4px;
+        }
+    }
+}
+
+// ぱんくずリスト
+
+.breadcrumb {
+    margin: 0;
+    padding: 0.8% 3%;
+    list-style: none;
+    text-align: left;
+    background-color: #efefef;
+
+    li {
+        display: inline;
+        /*横に並ぶように*/
+        list-style: none;
+        font-weight: bold;
+        font-size: 1.8rem;
+
+        /*太字*/
+        &:after {
+            /* >を表示*/
+            content: '>';
+            padding: 0 0.2em;
+            color: #555;
+        }
+
+        &:last-child:after {
+            content: '';
+        }
+
+        a {
+            text-decoration: none;
+            color: #555;
+
+            /*色*/
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+/* ---------------
+footer
+------------------ */
+footer {
+    height: auto;
+    background-color: white;
+    padding: 30px 0;
+    margin-top: 80px;
+    background-color: #5D261B;
+    text-align: center;
+
+    .footer-logo img {
+        width: 180px;
+    }
+
+    .footer-nav {
+        font-size: 2.4rem;
+        margin-left: 40px;
+
+        .sns {
+            display: flex;
+            justify-content: center;
+        }
+
+        ul li {
+            margin-right: 40px;
+        }
+
+
+
+        .sns img {
+            display: inline-block;
+            margin-top: 30px;
+            width: 40px;
+
+        }
+
+        p {
+            color: white;
+            margin-top: 20px;
+            font-size: 1.4rem;
+            margin-right: 40px;
+        }
+    }
+}

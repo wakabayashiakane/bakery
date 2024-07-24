@@ -1,0 +1,227 @@
+@use "mixin" as m;
+
+/*------------------
+online shop（固定ページ）
+------------------- */
+.online-page {
+    // max-width: 1600px;
+    // margin: 0 auto;
+
+
+    .online-shop {
+        display: flex;
+        align-items: center;
+        background-color: #5D261B;
+
+        .mainvisual {
+            width: 80%;
+            height: calc(100vh - 120px);
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .title {
+            position: absolute;
+            right: 450px;
+            bottom: 30px;
+            color: #FAF8F5;
+            text-shadow: 2px 2px 8px #000;
+            font-size: 10.0rem;
+
+            @include m.sp {
+                font-size: 5.6rem;
+                right: 120px;
+                bottom: 30px;
+            }
+
+
+        }
+
+        .text {
+            width: 20%;
+
+
+            p {
+                writing-mode: vertical-rl;
+                font-size: 2.4rem;
+                margin-left: 120px;
+                color: white;
+                text-shadow: 2px 2px 8px #000;
+
+                @include m.sp {
+                    margin-left: 10px
+                }
+            }
+        }
+
+        .img-wrap {
+            overflow: hidden;
+            position: relative;
+
+            &::before {
+                animation: img-wrap 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+                background: #5D261B;
+                content: '';
+                inset: 0;
+                pointer-events: none;
+                position: absolute;
+                z-index: 1;
+            }
+        }
+
+        @keyframes img-wrap {
+            100% {
+                transform: translateX(100%);
+            }
+        }
+    }
+
+    .section-title {
+
+        .en,
+        .ja {
+            font-size: 2.0rem;
+
+        }
+
+    }
+
+    .menu .item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 100px 80px;
+
+        @include m.sp {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+
+        li {
+            display: flex;
+
+            @include m.sp {
+                flex-direction: column;
+            }
+        }
+
+        .product {
+            width: 50%;
+            text-align: center;
+
+
+            @include m.sp {
+                width: 100%;
+            }
+
+
+            h3 {
+                border: 1px solid #5D261B;
+                padding: 10px 10px;
+                border-radius: 10px;
+                background-color: #fff;
+                background: linear-gradient(transparent 60%, #96d157be 100%);
+                margin-bottom: 20px;
+                display: inline-block;
+                font-size: 1.8rem;
+                box-shadow: 3px 3px #4a991c;
+                font-weight: bold;
+                text-align: left;
+
+
+            }
+
+            img {
+                width: 80%;
+            }
+        }
+
+        .description {
+            width: 50%;
+            text-align: left;
+
+
+
+
+            @include m.sp {
+                width: 100%;
+                text-align: center;
+            }
+
+            p {
+
+                &:nth-of-type(1) {
+                    font-size: 2.4rem;
+                }
+
+                &:nth-of-type(2) {
+                    font-size: 2.0rem;
+                    margin-top: 20px;
+                }
+
+                &:nth-of-type(3) {
+                    font-size: 1.6rem;
+                }
+
+                &:nth-of-type(3) {
+                    margin: 20px 0;
+                }
+            }
+
+
+
+            .buy-btn {
+                border: 1px solid #000;
+                padding: 10px 10px;
+                border-radius: 10px;
+                background-color: #FBD650;
+                text-align: center;
+                margin-left: 0;
+                margin-right: auto;
+                width: 80%;
+                font-size: 1.6rem;
+                box-shadow: 0 7px #7b6928;
+
+                &:active {
+                    position: relative;
+                    top: 6px;
+                    box-shadow: none;
+                }
+
+                @include m.sp {
+
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                a {
+                    color: #000;
+
+                }
+
+                .fa-shopping-cart {
+                    color: #5D261B;
+                    margin-right: 10px;
+                    font-size: 1.5em;
+                }
+            }
+
+
+
+            select {
+                width: 50%;
+                padding: 5px 10px;
+                appearance: menulist;
+                border: 1px solid #000;
+                font-size: 1.6rem;
+                margin-bottom: 20px;
+                background-color: #fff;
+                position: relative;
+
+            }
+        }
+    }
+}

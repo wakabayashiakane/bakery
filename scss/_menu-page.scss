@@ -1,0 +1,279 @@
+@use "mixin" as m;
+
+/* -----------
+MENU
+-------------- */
+.menu-page {
+
+  .mainvisual {
+    background-image: url("../img/MENUトップ画像.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+    animation: transscaleX 2s ease 0s 1 normal;
+  }
+
+
+  @keyframes transscaleX {
+    0% {
+      transform: scaleX(0);
+    }
+
+    100% {
+      transform: scaleX(1);
+    }
+  }
+
+  .title {
+    color: white;
+    position: relative;
+    top: 50%;
+    transform: translate(-50% -50%);
+    text-align: center;
+    align-items: center;
+    font-size: 4.8rem;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    text-shadow: 2px 2px 8px #000;
+
+    &::after,
+    &::before {
+      content: "";
+      width: 15%;
+      border: 3px solid white;
+    }
+  }
+
+  .menu {
+    text-align: center;
+
+
+    h2 {
+      font-size: 3.2rem;
+      position: relative;
+      margin: 80px 0;
+      background: linear-gradient(transparent 60%, #96d157be 100%);
+      display: inline-block;
+
+      &::after {
+        content: "";
+        width: 50%;
+        border: 3px solid #000;
+        position: absolute;
+        top: 130%;
+        left: 30%;
+      }
+    }
+  }
+
+  .menu-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 60px 18px;
+
+    @include m.sp {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    span {
+      border: 1px solid #FBD650;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: inline-block;
+      text-align: center;
+      line-height: 100px;
+      background-color: #FBD650;
+      opacity: 0.8;
+      color: #000;
+      font-weight: bold;
+      font-size: 1.6rem;
+      position: absolute;
+      top: -50px;
+      left: 0;
+      z-index: 20;
+    }
+
+    img {
+      width: 100%;
+      height: 30vh;
+      object-fit: cover;
+      border-radius: 10% 0% 10% 0;
+      transition: all 0.2s ease;
+      margin-bottom: 12px;
+      display: inline-block
+    }
+
+    li p {
+      font-size: 2.0rem;
+
+      &:nth-of-type(3) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+/* -----------------
+モーダルウィンドウ 
+--------------------*/
+
+/* ボタンのデザイン */
+.modal-toggle {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 5px;
+  color: black;
+  transition: 0.3s;
+  font-size: 1.6rem;
+}
+
+.toggle:hover {
+  opacity: .8;
+}
+
+/* オーバーレイ */
+.overlay {
+  /* 位置を固定 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* 画面いっぱいに広がるようにする */
+  width: 100%;
+  height: 100vh;
+  /* rgbaを使って60%の黒いオーバーレイにする */
+  background: rgba(0, 0, 0, 0.6);
+  /* デフォルトでは見えないようにする */
+  opacity: 0;
+  visibility: hidden;
+  /* 表示する際の変化の所要時間 */
+  transition: .3s;
+  z-index: 10;
+
+  &.active {
+    /* activeクラスがついたときにオーバーレイを表示する */
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* activeクラスのついたオーバーレイ */
+
+/* モーダルウィンドウ */
+.modal {
+  max-width: 600px;
+  width: 86%;
+  padding: 100px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  /* 位置の調整(真ん中に表示) */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* デフォルトでは非表示にしておく */
+  opacity: 0;
+  visibility: hidden;
+  /* 表示の変化にかかる時間 */
+  transition: .3s;
+  z-index: 20;
+
+  /* activeクラスのついたモーダルウィンドウ */
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+}
+
+
+/* モーダルウィンドウ内の閉じるボタン */
+
+.modal-inner {
+  display: flex;
+  align-items: center;
+
+  .image {
+    width: 50%;
+  }
+
+  .text {
+    width: 50%;
+
+    P {
+      &:nth-of-type(1) {
+        font-size: 2.4rem;
+      }
+
+      &:nth-of-type(2) {
+        font-size: 2.0rem;
+      }
+
+      &:nth-of-type(3) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+img {
+  width: 50%;
+}
+
+
+/*きらっと光る*/
+
+.btnshine {
+  /*キラッと光る基点とするためrelativeを指定*/
+  position: relative;
+  /*ボタンの形状*/
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  outline: none;
+  overflow: hidden;
+}
+
+/*キラッと光る*/
+.btnshine {
+
+  &::before {
+    content: '';
+    /*絶対配置でキラッと光るの位置を決める*/
+    position: absolute;
+    top: 0;
+    left: -75%;
+    /*キラッと光る形状*/
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    transform: skewX(-25deg);
+
+    /*hoverした際の移動のアニメーション*/
+    &::before {
+      animation: shine 0.7s;
+    }
+  }
+
+  @keyframes shine {
+    100% {
+      left: 125%;
+    }
+  }
+}
