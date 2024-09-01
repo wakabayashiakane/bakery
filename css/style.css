@@ -697,7 +697,7 @@ pickup
 @media screen and (max-width: 768px) {
   .top-page .slick-list span,
 .top-page .slick-list .menu-list .item span {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 .top-page .slick-list .item p {
