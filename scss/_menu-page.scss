@@ -207,8 +207,16 @@ MENU
   display: flex;
   align-items: center;
 
+  @include m.sp {
+    flex-direction: column;
+  }
+
   .image {
     width: 50%;
+
+    @include m.sp {
+      width: 100%;
+    }
   }
 
   .text {

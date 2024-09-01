@@ -1182,8 +1182,18 @@ MENU
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .modal-inner {
+    flex-direction: column;
+  }
+}
 .modal-inner .image {
   width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .modal-inner .image {
+    width: 100%;
+  }
 }
 .modal-inner .text {
   width: 50%;
