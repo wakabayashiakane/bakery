@@ -601,7 +601,7 @@ online
   color: white;
   position: absolute;
   top: 25%;
-  right:5%;
+  right: 5%;
 }
 
 .online .inner .text .buy-btn {
@@ -716,17 +716,18 @@ news
   position: relative;
 }
 
-.news-inner .news-image::after{
+.news-inner .news-image::after {
   content: "新着情報";
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50% ,-50%);
+  transform: translate(-50%, -50%);
   font-size: 4.0rem;
   text-shadow: 2px 2px 8px white;
-  
+
 }
-.news-inner .news-image img{
+
+.news-inner .news-image img {
   width: 100%;
   opacity: 0.5;
 }
@@ -739,7 +740,7 @@ news
   margin-left: 40px;
 }
 
-.news-item li{
+.news-item li {
   border-bottom: 1px dotted #ccc;
 }
 
@@ -1603,10 +1604,11 @@ form p {
   .top-page .news-inner {
     flex-direction: column;
   }
-  
+
   .top-page .news-inner .news-image {
     width: 100%;
   }
+
   .top-page .news-inner .news-item {
     width: 100%;
   }
@@ -1624,7 +1626,7 @@ form p {
     margin-left: 0;
   }
 
-  
+
 
   .online-page .online-page .item {
     display: grid;
