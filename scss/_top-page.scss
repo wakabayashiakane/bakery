@@ -236,6 +236,10 @@ pickup
         top: -50px;
         left: 0;
         z-index: 20;
+
+        @include m.sp {
+            font-size: 1.4rem;
+        }
     }
 
     .item p {

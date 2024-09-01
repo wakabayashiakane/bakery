@@ -694,6 +694,12 @@ pickup
   left: 0;
   z-index: 20;
 }
+@media screen and (max-width: 768px) {
+  .top-page .slick-list span,
+.top-page .slick-list .menu-list .item span {
+    font-size: 1.4rem;
+  }
+}
 .top-page .slick-list .item p {
   position: absolute;
   top: 50%;
